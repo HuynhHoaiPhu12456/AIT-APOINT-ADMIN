@@ -233,6 +233,8 @@
         },
         "reset": "Nhập lại",
         "reward-inventory-list": {
+          "edit": "Sửa",
+          "delete": "Xóa",
           "result": "Kết quả",
           "action": "Thao tác",
           "name": "Tên",
@@ -334,6 +336,8 @@
         "date": "Thời gian yêu cầu",
         "reset": "Nhập lại",
         "reward-order-list": {
+          "edit": "Sửa",
+          "delete": "Xóa",
           "result": "Kết quả",
           "action": "Thao tác",
           "user": "Tên người dùng",
@@ -364,8 +368,10 @@
         "clear": "Nhập lại",
         "search": "Tìm kiếm",
         "eventlist": {
+          "edit": "Sửa",
+          "delete": "Xóa",
           "title": "Danh sách sự kiện",
-          "actions": "Hành động"
+          "actions": "Thao tác"
         }
       },
       "register": {

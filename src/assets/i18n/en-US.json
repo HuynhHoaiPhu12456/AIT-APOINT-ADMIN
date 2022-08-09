@@ -232,6 +232,8 @@
         },
         "reset": "Clear",
         "reward-inventory-list": {
+          "edit": "Edit",
+          "delete": "Delete",
           "result": "Result",
           "action": "Actions",
           "name": "Name",
@@ -332,6 +334,8 @@
         "date": "Time request",
         "reset": "Clear",
         "reward-order-list": {
+          "edit": "Edit",
+          "delete": "Delete",
           "result": "Result",
           "action": "Actions",
           "user": "User",
@@ -362,6 +366,8 @@
         "search": "Search",
         "eventlist": {
           "title": "Event Category List",
+          "edit": "Edit",
+          "delete": "Delete",
           "actions": "Actions"
         }
       },

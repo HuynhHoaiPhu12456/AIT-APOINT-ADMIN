@@ -152,11 +152,15 @@ export class EventCategoryComponent implements OnInit {
       custom: [
         {
           name: 'edit',
-          title: '<img src="assets/icons/nb-edit.svg" width="30" height="30">',
+          title: `
+                        <i class="nb-edit" title="${this.translateService.translate("biz.eventcategory.read.eventlist.edit")}"></i>
+                    `
         },
         {
           name: 'delete',
-          title: '<img src="assets/icons/nb-trash.svg" width="30" height="30">',
+          title: `
+                        <i class="nb-trash" title="${this.translateService.translate("biz.eventcategory.read.eventlist.delete")}"></i>
+                    `
         }
       ],
       add: false,

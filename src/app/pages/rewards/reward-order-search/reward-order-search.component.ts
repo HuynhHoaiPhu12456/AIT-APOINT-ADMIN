@@ -52,11 +52,15 @@ export class RewardOrderSearchComponent implements OnInit {
       custom: [
         {
           name: 'edit',
-          title:'<img src="assets/icons/nb-edit.svg" width="30" height="30">',
+          title: `
+                        <i class="nb-edit" title="${this.translateService.translate("biz.reward-order.read.reward-order-list.edit")}"></i>
+                    `
         },
         {
           name: 'delete',
-          title:'<img src="assets/icons/nb-trash.svg" width="30" height="30">'
+          title: `
+          <i class="nb-trash" title="${this.translateService.translate("biz.reward-order.read.reward-order-list.delete")}"></i>
+      `
         },
         ],
         add: false,

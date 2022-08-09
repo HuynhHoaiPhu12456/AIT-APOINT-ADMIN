@@ -228,6 +228,8 @@
         },
         "reset": "クリア",
         "reward-inventory-list": {
+          "edit": "Edit",
+          "delete": "Delete",
           "result": "結果",
           "action": "行動",
           "name": "名前",
@@ -328,6 +330,8 @@
         "date": "時間リクエスト",
         "reset": "クリア",
         "reward-order-list": {
+          "edit": "Edit",
+          "delete": "Delete",
           "result": "結果",
           "action": "行動",
           "user": "ユーザー",
@@ -357,6 +361,8 @@
         "clear": "Clear",
         "search": "Search",
         "eventlist": {
+          "edit": "Edit",
+          "delete": "Delete",
           "title": "Event Category List JP",
           "actions": "Actions"
         }

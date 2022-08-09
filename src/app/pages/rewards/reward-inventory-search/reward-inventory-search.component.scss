@@ -4,7 +4,10 @@
   }
 }
 
-:host ::ng-deep ng2-st-tbody-custom > a > img {
+/* :host ::ng-deep ng2-st-tbody-custom > a > img {
+  margin-left: 17px;
+} */
+:host ::ng-deep .nb-edit::before{
   margin-left: 17px;
 }
 
