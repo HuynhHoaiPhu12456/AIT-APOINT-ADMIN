@@ -307,12 +307,12 @@
         "success": "Deleted successfully"
       },
       "validate": {
-        "name": "Xin hãy nhập tên",
-        "type": "Xin hãy chọn loại quà",
-        "price": "Xin hãy nhập giá",
-        "total": "Xin hãy nhập tổng số",
-        "shipping": "Xin hãy nhập số đã vận chuyển",
-        "sold": "Xin hãy nhập số lượng bán"
+        "name": "Please enter name",
+        "type": "Please enter type",
+        "price": "Please enter your price",
+        "total": "Please enter your total",
+        "shipping": "Please enter your shipping",
+        "sold": "Please enter your sold"
     }
     },
     "reward-order": {
