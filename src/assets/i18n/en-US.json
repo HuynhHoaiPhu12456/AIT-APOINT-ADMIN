@@ -309,10 +309,10 @@
       "validate": {
         "name": "Please enter name",
         "type": "Please enter type",
-        "price": "Please enter your price",
-        "total": "Please enter your total",
-        "shipping": "Please enter your shipping",
-        "sold": "Please enter your sold"
+        "price": "Please enter price",
+        "total": "Please enter total",
+        "shipping": "Please enter shipping",
+        "sold": "Please enter sold"
     }
     },
     "reward-order": {
