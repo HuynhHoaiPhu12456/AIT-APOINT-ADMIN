@@ -305,7 +305,15 @@
         "cancel": "Cancel",
         "yes": "Yes",
         "success": "Deleted successfully"
-      }
+      },
+      "validate": {
+        "name": "Xin hãy nhập tên",
+        "type": "Xin hãy chọn loại quà",
+        "price": "Xin hãy nhập giá",
+        "total": "Xin hãy nhập tổng số",
+        "shipping": "Xin hãy nhập số đã vận chuyển",
+        "sold": "Xin hãy nhập số lượng bán"
+    }
     },
     "reward-order": {
       "read": {
