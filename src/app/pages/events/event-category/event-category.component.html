@@ -1,0 +1,73 @@
+<nb-layout>
+
+
+  <nb-layout-column>
+    <h3 class="header-col-title">
+      {{ "biz.eventcategory.read.title" | translate }}
+      <button (click)="resigterEventCategory()" class="btn-new" size="medium" nbButton status="primary">
+        {{ "biz.eventcategory.read.new" | translate }}
+      </button>
+    </h3>
+
+    <nb-card [formGroup]="eventForm">
+      <nb-card-header class="card-header-title" *ngIf="!iscard" (click)="openCardSearch()">{{ "biz.eventcategory.read.search" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon *ngIf="!iscard" (click)="openCardSearch()" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon *ngIf="iscard" (click)="openCardSearch()" icon="arrow-ios-upward-outline"></nb-icon>
+        </nb-action>
+      </nb-card-header>
+      <nb-card-header class="card-header-title" *ngIf="iscard" (click)="openCardSearch()">{{ "biz.eventcategory.read.search" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon *ngIf="!iscard" (click)="openCardSearch()" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon *ngIf="iscard" (click)="openCardSearch()" icon="arrow-ios-upward-outline"></nb-icon>
+        </nb-action>
+      </nb-card-header>
+
+      <nb-card-body *ngIf="iscard">
+        <div class="card-search">
+          <div class="card-search-body">
+            <p>{{ "biz.eventcategory.read.name" | translate }} <span style="color: #ff0000">*</span></p>
+            <input formControlName="name" type="text" nbInput fullWidth status="basic" placeholder='{{ "biz.eventcategory.read.name" | translate }}' />
+          </div>
+          <div class="card-search-body">
+            <p>{{ "biz.eventcategory.read.active.active" | translate }}</p>
+            <nb-select formControlName="active_flag" fullWidth placeholder='{{ "biz.eventcategory.read.active.active" | translate }}'>
+              <nb-option style="color: #ccc" [value]="null">--</nb-option>
+              <nb-option [value]="true">{{ "biz.eventcategory.read.active.actived" | translate }}</nb-option>
+              <nb-option [value]="false">{{ "biz.eventcategory.read.active.noactived" | translate }}</nb-option>
+            </nb-select>
+          </div>
+        </div>
+
+        <div class="btn-act">
+          <button (click)="clearEventCategoryForm()" class="btn-clear" size="medium" nbButton status="primary">
+            {{ "biz.eventcategory.read.clear" | translate }}
+          </button>
+          <button class="btn-search" size="medium" nbButton status="primary" (click)="searchEventCategory()">
+            {{ "biz.eventcategory.read.search" | translate }}
+          </button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header class="card-header-title" *ngIf="!iscardlist" (click)="openCardList()">{{ "biz.eventcategory.read.eventlist.title" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon *ngIf="!iscard" (click)="openCardList()" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon *ngIf="iscard" (click)="openCardList()" icon="arrow-ios-upward-outline"></nb-icon>
+        </nb-action>
+      </nb-card-header>
+      <nb-card-header class="card-header-title" *ngIf="iscardlist" (click)="openCardList()">{{ "biz.eventcategory.read.eventlist.title" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon *ngIf="!iscard" (click)="openCardList()" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon *ngIf="iscard" (click)="openCardList()" icon="arrow-ios-upward-outline"></nb-icon>
+        </nb-action>
+      </nb-card-header>
+      <nb-card-body *ngIf="!iscardlist">
+        <ng2-smart-table class="table table-hover" [settings]="settings" [source]="event_category"
+          (custom)="onCustomAction($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

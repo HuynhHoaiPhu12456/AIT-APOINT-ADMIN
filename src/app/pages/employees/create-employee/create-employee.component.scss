@@ -1,0 +1,75 @@
+@import '../../../@theme/styles/themes.scss';
+
+@include nb-install-component() {
+  nb-card {
+    transform: translate3d(0, 0, 0);
+  }
+
+  nb-card-footer {
+    text-align: right;
+    padding: auto;
+  }
+
+  .buttons-row {
+    margin: -0.5rem;
+  }
+
+  button[nbButton] {
+    margin: 0.5rem;
+  }
+
+  .action-icon {
+    @include nb-ltr(margin-right, 0.5rem);
+    @include nb-rtl(margin-left, 0.5rem);
+  }
+
+  .actions-card {
+    height: 8rem;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-button {
+  text-align: right;
+}
+::ng-deep {
+  ng2-st-tbody-edit-delete {
+    display: none;
+    height: 0 !important;
+  }
+
+  ng2-st-tbody-custom {
+    display: flex;
+    text-align: center;
+  }
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  text-align: right;
+  border-top: 1pt solid grey;
+  padding-top: 0.5rem;
+}
+
+.center_span {
+  margin: auto 15px auto 15px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #c5cee0;
+  width: 27px;
+  text-align: center;
+}
+
+.radio-row {
+  padding-left: 1rem;
+}
+
+.back-button {
+  text-align: right;
+}

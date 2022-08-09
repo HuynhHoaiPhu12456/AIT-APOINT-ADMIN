@@ -1,0 +1,41 @@
+@import '../../../@theme/styles/themes.scss';
+
+@include nb-install-component() {
+  nb-card {
+    transform: translate3d(0, 0, 0);
+  }
+
+  nb-card-footer {
+    text-align: right;
+    padding: auto;
+  }
+
+  .buttons-row {
+    margin: -0.5rem;
+  }
+
+  button[nbButton] {
+    margin-left: 0.5rem;
+  }
+
+  .action-icon {
+    @include nb-ltr(margin-right, 0.5rem);
+    @include nb-rtl(margin-left, 0.5rem);
+  }
+
+  .actions-card {
+    height: 8rem;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+    margin-top: 0.5rem;
+}
+
+.back-button {
+  text-align: right;
+}

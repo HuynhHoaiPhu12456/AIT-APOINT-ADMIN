@@ -1,0 +1,382 @@
+{
+  "home": {
+    "name": "Iron Man JP",
+    "footer": "Ait starter angular JP"
+  },
+  "common": {
+    "auth": {
+      "login": {
+        "title": "Login",
+        "subtitle": "Hello! Log in with your email.",
+        "email": "Email",
+        "password": "Password",
+        "forgot_pwd": "Forgot Password",
+        "remember": "Remember me",
+        "login": "Log In",
+        "no_account": "Don't have an account?",
+        "register": "Register"
+      },
+      "register": {
+        "title": "Register",
+        "fullname": "Full name",
+        "email": "Email",
+        "password": "Password",
+        "repeat_pwd": "Repeat password",
+        "confirm_pwd": "Confirm Password",
+        "agree": "Agree to",
+        "condition": "Terms & Conditions",
+        "register": "Register",
+        "enter": "or enter with",
+        "have_account": "Already have an account?",
+        "login": "Log in"
+      }
+    },
+    "search": {
+      "search": "Search",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "E-mail",
+      "create_by": "Create by",
+      "create_at": "Create at",
+      "change_by": "Change by",
+      "change_at": "Change at",
+      "date_of_birth": "Date of birth",
+      "gender": {
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "department": "Department",
+      "total_point": "Total point",
+      "clear": "Clear",
+      "submit": "Search"
+    },
+    "department": {
+      "read": {
+        "title": "Department",
+        "department_list": "Department list",
+        "new": "New",
+        "action": "Actions",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "create_at": "Create at",
+        "create_by": "Create by",
+        "change_at": "Change at",
+        "change_by": "Change by",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "create": {
+        "title": "Department Register",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "clear": "Clear",
+        "save": "Save"
+      },
+      "update": {
+        "title": "Update Department",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "unchange": "Reset",
+        "clear": "Clear",
+        "save": "Save"
+      }
+    },
+    "employee": {
+      "read": {
+        "title": "Employee",
+        "new": "New",
+        "employee_list": "Employee list",
+        "action": "Actions",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "create_by": "Create by",
+        "create_at": "Create at",
+        "change_by": "Change by",
+        "change_at": "Change at",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "total_point": "Total point",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "create": {
+        "title": "Create Employee",
+        "user_id": "User ID",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "clear": "Clear",
+        "save": "Save"
+      },
+      "update": {
+        "title": "Update Employee",
+        "user_id": "User ID",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "total_point": "Total point",
+        "unchange": "Reset",
+        "clear": "Clear",
+        "save": "Save"
+      }
+    }
+  },
+  "message": {
+    "register": {
+      "success": "Register successfully!",
+      "failure": "Cannot register!"
+    },
+    "update": {
+      "success": "Update successfully!",
+      "failure": "Cannot update!"
+    },
+    "form_error": {
+      "email": "Email should be the real one!",
+      "require": " is required!",
+      "length": {
+        "contain": " should contain",
+        "from": "from",
+        "to": "to",
+        "characters": "characters"
+      },
+      "confirm": {
+        "require": "Password confirmation is required!",
+        "not_match": "Password does not match the confirm password."
+      }
+    }
+  },
+  "sidebar": {
+    "department": "Department",
+    "employee": "Employee",
+    "reward-inventory": "Reward inventory",
+    "reward-order": "Reward order",
+    "event-category": "Event Category",
+    "master": "MASTER",
+    "business": "BUSINESS",
+    "auth": "Auth",
+    "login": "Login",
+    "register": "Register",
+    "request password": "Request Password",
+    "reset password": "Reset Password"
+  },
+  "biz": {
+    "reward-inventory": {
+      "read": {
+        "title": "報酬在庫リスト",
+        "new": "新しい",
+        "search": "探す",
+        "name": "名前",
+        "type": {
+          "type": "タイプ",
+          "none": "なし",
+          "others": "その他",
+          "point": "点",
+          "voucher/coupon": "バウチャー/クーポン",
+          "course": "コース",
+          "ticket": "チケット"
+        },
+        "price": "価格",
+        "total": "合計",
+        "shipping": "運送",
+        "sold": "売却",
+        "approve": {
+          "approve": "承認",
+          "none": "なし",
+          "approved": "承認済み",
+          "not-approved": "未承認"
+        },
+        "active": {
+          "active": "アクティブ",
+          "none": "なし",
+          "actived": "アクティブ化",
+          "not-actived": "アクティブ化されていません"
+        },
+        "reset": "クリア",
+        "reward-inventory-list": {
+          "result": "結果",
+          "action": "行動",
+          "name": "名前",
+          "type": {
+            "type": "タイプ",
+            "none": "なし",
+            "others": "その他",
+            "point": "点",
+            "voucher/coupon": "バウチャー/クーポン",
+            "course": "コース",
+            "ticket": "チケット"
+          },
+          "price": "価格",
+        "total": "合計",
+        "shipping": "運送",
+        "sold": "売却",
+        "approve": {
+          "approve": "承認",
+          "none": "なし",
+          "approved": "承認済み",
+          "not-approved": "未承認"
+        },
+        "active": {
+          "active": "アクティブ",
+          "none": "なし",
+          "actived": "アクティブ化",
+          "not-actived": "アクティブ化されていません"
+        }
+        }
+      },
+      "register": {
+        "title": "在庫登録",
+        "name": "名前",
+        "description": "説明",
+        "image": "画像",
+        "type": {
+          "type": "タイプ",
+          "none": "なし",
+          "others": "その他",
+          "point": "点",
+          "voucher/coupon": "バウチャー/クーポン",
+          "course": "コース",
+          "ticket": "チケット"
+        },
+        "price": "価格",
+      "total": "合計",
+      "shipping": "運送",
+      "sold": "売却",
+      "approve": {
+        "approve": "承認",
+        "none": "なし",
+        "approved": "承認済み",
+        "not-approved": "未承認"
+      },
+      "active": {
+        "active": "アクティブ",
+        "none": "なし",
+        "actived": "アクティブ化",
+        "not-actived": "アクティブ化されていません"
+      },
+        "clear": "クリア",
+        "save": "保存",
+        "back": "戻る"
+      },
+      "update": {
+        "title": "在庫を更新する",
+        "update": "アップデート"
+      },
+      "confirm": {
+        "require": "この報酬を削除してもよろしいですか？",
+        "cancel": "キャンセル",
+        "yes": "はい",
+        "success": "正常に削除されました"
+      }
+    },
+    "reward-order": {
+      "read": {
+        "title": "ご褒美注文一覧",
+        "new": "新しい",
+        "search": "探す",
+        "user": "ユーザー",
+        "reward": "褒美",
+        "status": {
+          "status": "状態",
+          "none": "なし",
+          "new": "新しい",
+          "approved": "承認済み",
+          "claimed": "請求済み"
+        },
+        "date": "時間リクエスト",
+        "reset": "クリア",
+        "reward-order-list": {
+          "result": "結果",
+          "action": "行動",
+          "user": "ユーザー",
+          "reward": "褒美",
+          "status": {
+            "status": "状態",
+            "none": "なし",
+            "new": "新しい",
+            "approved": "承認済み",
+            "claimed": "請求済み"
+          },
+          "remark": "述べる",
+          "date": "時間リクエスト"
+        }
+      }
+    },
+    "eventcategory": {
+      "read": {
+        "title": "Event category JP",
+        "new": "New",
+        "name": "Name",
+        "active": {
+          "active": "Active",
+          "actived": "Actived",
+          "noactived": "No Actived"
+        },
+        "clear": "Clear",
+        "search": "Search",
+        "eventlist": {
+          "title": "Event Category List JP",
+          "actions": "Actions"
+        }
+      },
+      "register": {
+        "title": "Register Event Category JP",
+        "name": "Name",
+        "description": "Description",
+        "active": {
+          "active": "Active",
+          "actived": "Actived",
+          "noactived": "No Actived"
+        },
+        "clear": "Clear",
+        "save": "Save",
+        "back": "Back"
+      },
+      "update": {
+        "title": "Update Event Category JP",
+        "update": "Update"
+      },
+      "confirm": {
+        "require": "Are you sure you want to delete this event ?",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "success": "Deleted successfully",
+        "validate": "Please input event name"
+      }
+    }
+  }
+}

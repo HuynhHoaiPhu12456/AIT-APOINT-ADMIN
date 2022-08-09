@@ -1,0 +1,176 @@
+<h1 class="text-primary">{{ "common.department.read.title" | translate }}</h1>
+<div class="add-button">
+    <button nbButton status="primary" (click)="onClickNew()">
+        {{ "common.department.read.new" | translate }}
+    </button>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<nb-accordion>
+			<nb-accordion-item>
+				<nb-accordion-item-header>
+					{{ "common.search.search" | translate }}
+				</nb-accordion-item-header>
+				<nb-accordion-item-body>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputName" class="label">{{ "common.search.name" | translate }}</label>
+								<input type="text" nbInput fullWidth id="inputName" placeholder='{{ "common.search.name" | translate }}'>
+						  	</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputAddress" class="label">{{ "common.search.address" | translate }}</label>
+								<input type="text" nbInput fullWidth id="inputAddress" placeholder='{{ "common.search.address" | translate }}'>
+							</div>
+						</div>
+					</div>
+					<div class="row">      
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputPhone" class="label">{{ "common.search.phone" | translate }}</label>
+								<input type="text" nbInput fullWidth id="inputPhone" placeholder='{{ "common.search.phone" | translate }}'>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputEmail" class="label">{{ "common.search.email" | translate }}</label>
+								<input type="email" nbInput fullWidth id="inputEmail" placeholder='{{ "common.search.email" | translate }}'>
+							</div>
+						</div>
+					</div>
+                    <div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputCreateBy" class="label">{{ "common.search.create_by" | translate }}</label>
+								<input type="text" nbInput fullWidth id="inputCreateBy" placeholder='{{ "common.search.create_by" | translate }}'>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputChangeBy" class="label">{{ "common.search.change_by" | translate }}</label>
+								<input type="text" nbInput fullWidth id="inputChangeBy" placeholder='{{ "common.search.change_by" | translate }}'>
+							</div>
+						</div>
+					</div>
+                    <div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputCreateBy" class="label">{{ "common.search.create_at" | translate }}</label>
+								<div style="display: flex;">
+									<nb-form-field>
+										<input fullWidth
+											#create1
+											nbInput
+											placeholder="yyyy/MM/dd"
+											[nbDatepicker]="createAt1"
+										>
+										<button nbSuffix nbButton ghost (click)="create1.click()">
+											<nb-icon
+												nbSuffix
+												icon="calendar-outline"
+												pack="eva"
+												style="cursor: pointer"
+											></nb-icon>
+										</button>									
+										<nb-datepicker #createAt1></nb-datepicker>
+									</nb-form-field>									
+									<span class="center_span">~</span>
+									<nb-form-field>
+										<input fullWidth
+											#create2
+											nbInput
+											placeholder="yyyy/MM/dd"
+											[nbDatepicker]="createAt2"
+										>
+										<button nbSuffix nbButton ghost (click)="create2.click()">
+											<nb-icon
+												nbSuffix
+												icon="calendar-outline"
+												pack="eva"
+												style="cursor: pointer"
+											></nb-icon>
+										</button>									
+										<nb-datepicker #createAt2></nb-datepicker>
+									</nb-form-field>
+								</div>							
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="inputCreateBy" class="label">{{ "common.search.change_at" | translate }}</label>
+								<div style="display: flex;">
+									<nb-form-field>
+										<input
+											#change1
+											nbInput
+											placeholder="yyyy/MM/dd"
+											[nbDatepicker]="changeAt1"
+										>
+										<button nbSuffix nbButton ghost (click)="change1.click()">
+											<nb-icon
+												nbSuffix
+												icon="calendar-outline"
+												pack="eva"
+												style="cursor: pointer"
+											></nb-icon>
+										</button>									
+										<nb-datepicker #changeAt1></nb-datepicker>
+									</nb-form-field>
+									<span class="center_span">~</span>
+									<nb-form-field>
+										<input
+											#change2
+											nbInput
+											placeholder="yyyy/MM/dd"
+											[nbDatepicker]="changeAt2"
+										>
+										<button nbSuffix nbButton ghost (click)="change2.click()">
+											<nb-icon
+												nbSuffix
+												icon="calendar-outline"
+												pack="eva"
+												style="cursor: pointer"
+											></nb-icon>
+										</button>									
+										<nb-datepicker #changeAt2></nb-datepicker>
+									</nb-form-field>	
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="button-group">
+						<button type="reset" nbButton status="primary" size="medium">
+							{{ "common.search.clear" | translate }}
+						</button>
+						<button type="submit" nbButton status="primary">
+							{{ "common.search.submit" | translate }}
+						</button>
+					</div>					
+				</nb-accordion-item-body>
+			</nb-accordion-item>
+		</nb-accordion>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<nb-accordion>
+			<nb-accordion-item expanded="true">
+				<nb-accordion-item-header>
+					{{ "common.department.read.department_list" | translate }}
+				</nb-accordion-item-header>
+			
+				<nb-accordion-item-body>
+					<ng2-smart-table
+						[settings]="settings"
+						[source]="sources"
+						(custom)="onCustomEvent($event)"
+					>
+					</ng2-smart-table>
+				</nb-accordion-item-body>
+			</nb-accordion-item>			
+		</nb-accordion>
+	</div>
+</div>

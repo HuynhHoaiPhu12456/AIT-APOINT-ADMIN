@@ -1,0 +1,15 @@
+<nb-card style="width:500px">
+  <!-- <nb-card-header>Messege</nb-card-header> -->
+  <nb-card-body>
+    <p>{{"biz.eventcategory.confirm.require" | translate}}</p>
+    <div class="btn-dialog">
+      <button nbButton hero style="margin-right: 10px ;" shape="round" status="primary"
+        (click)="cancel()">{{"biz.eventcategory.confirm.cancel" | translate}}</button>
+      <button nbButton hero status="primary" shape="round" style="width: 96.344px;" (click)="deleteEventCategory()"
+        (click)="showToast(physicalPositions.BOTTOM_RIGHT, 'success')">{{"biz.eventcategory.confirm.yes" | translate}}</button>
+    </div>
+  </nb-card-body>
+
+
+
+</nb-card>

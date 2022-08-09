@@ -1,0 +1,65 @@
+.wrapper {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  .body {
+    margin: 20px 10%;
+    display: flex;
+    flex-direction: row;
+    place-content: space-around;
+  }
+}
+
+.header {
+  margin: 50px 0;
+  height: 50px;
+  font-size: 28px;
+  color: #0386d0;
+}
+
+.footer {
+  height: 50px;
+  margin: 20px 0 50px 0;
+  display: flex;
+  .btn-groupz {
+    flex: 1;
+    justify-content: center;
+    .btn {
+      max-width: 150px;
+      max-height: 40px;
+    }
+    .btn + .btn {
+      margin-left: 20px;
+    }
+  }
+}
+
+.space {
+  margin: 30px;
+}
+
+.main {
+  text-align: left;
+}
+
+.gender {
+  display: flex;
+  flex-direction: column;
+  .text {
+    text-align: left;
+  }
+}
+
+.aside {
+  input {
+    width: 400px;
+  }
+  .text {
+    float: left;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+}

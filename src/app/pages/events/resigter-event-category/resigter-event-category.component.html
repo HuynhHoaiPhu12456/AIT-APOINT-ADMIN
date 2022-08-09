@@ -1,0 +1,117 @@
+<nb-layout>
+
+  <nb-layout-column>
+    <h3 *ngIf="id != '0'" class="header-col-title">{{ "biz.eventcategory.update.title" | translate }}</h3>
+    <h3 *ngIf="id === '0'" class="header-col-title">{{ "biz.eventcategory.register.title" | translate }}</h3>
+
+    <nb-card [formGroup]="eventForm">
+      <nb-card-header class="card-header-title" *ngIf="!iscard" (click)="openCard()"
+        >{{ "biz.eventcategory.register.title" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon
+            *ngIf="!iscard"
+            (click)="openCard()"
+            icon="arrow-ios-downward-outline"
+          ></nb-icon>
+          <nb-icon
+            *ngIf="iscard"
+            (click)="openCard()"
+            icon="arrow-ios-upward-outline"
+          ></nb-icon>
+        </nb-action>
+      </nb-card-header>
+      <nb-card-header class="card-header-title" *ngIf="iscard" (click)="openCard()"
+        >{{ "biz.eventcategory.register.title" | translate }}
+        <nb-action class="act-openCard">
+          <nb-icon
+            *ngIf="!iscard"
+            (click)="openCard()"
+            icon="arrow-ios-downward-outline"
+          ></nb-icon>
+          <nb-icon
+            *ngIf="iscard"
+            (click)="openCard()"
+            icon="arrow-ios-upward-outline"
+          ></nb-icon>
+        </nb-action>
+      </nb-card-header>
+      <nb-card-body *ngIf="!iscard">
+        <div class="card-body">
+          <div class="card-resig">
+            <p>{{ "biz.eventcategory.register.name" | translate }} <span style="color: #ff0000">*</span></p>
+            <input
+              formControlName="name"
+              type="text"
+              nbInput
+              fullWidth
+              status="basic"
+              placeholder='{{ "biz.eventcategory.register.name" | translate }}'
+            />
+          </div>
+
+          <div class="card-resig">
+            <p>{{ "biz.eventcategory.register.description" | translate }}</p>
+            <textarea
+              formControlName="description"
+              nbInput
+              fullWidth
+              placeholder='{{ "biz.eventcategory.register.description" | translate }}'
+            ></textarea>
+          </div>
+        </div>
+
+        <p>{{ "biz.eventcategory.register.active.active" | translate }}</p>
+        <nb-checkbox
+          *ngIf="active_flag"
+          formControlName="active_flag"
+          (checkedChange)="toggle($event)"
+          status="primary"
+          >{{ "biz.eventcategory.register.active.actived" | translate }}</nb-checkbox
+        >
+        <nb-checkbox
+          *ngIf="!active_flag"
+          formControlName="active_flag"
+          (checkedChange)="toggle($event)"
+          status="primary"
+          >{{ "biz.eventcategory.register.active.noactived" | translate }}</nb-checkbox
+        >
+      </nb-card-body>
+    </nb-card>
+
+    <div class="btn-act">
+      <button
+        (click)="clearEventCategoryForm()"
+        class="btn-clear"
+        size="medium"
+        nbButton
+        status="primary"
+      >
+      {{ "biz.eventcategory.register.clear" | translate }}
+      </button>
+      <button
+        *ngIf="id === '0'"
+        (click)="createEventCategory()"
+        (click)="showToast(physicalPositions.BOTTOM_RIGHT, 'warning')"
+        class="btn-save"
+        size="medium"
+        nbButton
+        status="primary"
+      >
+      {{ "biz.eventcategory.register.save" | translate }}
+      </button>
+      <button
+        *ngIf="id != '0'"
+        (click)="updateEventCategory()"
+        class="btn-save"
+        size="medium"
+        nbButton
+        status="primary"
+      >
+      {{ "biz.eventcategory.update.update" | translate }}
+      </button>
+      <button nbButton style="margin-left: 10px" (click)="back()"  status="primary">
+        {{ "biz.eventcategory.register.back" | translate }}
+      </button>
+    </div>
+  </nb-layout-column>
+</nb-layout>

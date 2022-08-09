@@ -1,0 +1,14 @@
+:host ::ng-deep nb-select.size-small .select-button {
+    font-weight: 100;
+    font-size: 15px;
+   /*  background-color: #fff;
+    color: black */
+}
+// :host ::ng-deep nb-select.appearance-outline.status-basic  :hover{
+//   background-color: #fff;
+//   color: black
+// }
+:host ::ng-deep nb-select.appearance-outline.status-basic .select-button {
+  background-color: #fff;
+  color: black
+}

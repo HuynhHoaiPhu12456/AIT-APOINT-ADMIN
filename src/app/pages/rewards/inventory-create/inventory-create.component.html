@@ -1,0 +1,128 @@
+<nb-layout >
+  <nb-layout-column >
+    <nb-card class="card-registerForm" >
+      <nb-card-header (click)="toggleCard()" style="cursor: pointer">
+        <h3 style="text-align: center; color: #3a86ff;  " *ngIf="id === '0'">{{ "biz.reward-inventory.register.title" | translate }}
+          <button nbButton status="default" style="float: right;">
+            <nb-icon *ngIf="!isCard" (click)="toggleCard()" icon="arrow-ios-downward-outline"></nb-icon>
+            <nb-icon *ngIf="isCard" (click)="toggleCard()" icon="arrow-ios-upward-outline"></nb-icon>
+          </button>
+
+        </h3>
+        <h3 style="text-align: center; color: #3a86ff;" *ngIf="id != '0'">{{ "biz.reward-inventory.update.title" | translate }}
+          <button nbButton status="default" style="float: right;">
+            <nb-icon *ngIf="!isCard" (click)="toggleCard()" icon="arrow-ios-downward-outline"></nb-icon>
+            <nb-icon *ngIf="isCard" (click)="toggleCard()" icon="arrow-ios-upward-outline"></nb-icon>
+          </button>
+
+        </h3>
+        <div class="bottom-radius" *ngIf="isCard"></div>
+      </nb-card-header>
+      <nb-card-body *ngIf="isCard">
+        <form [formGroup]="registerForm">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.name" | translate }}</p>
+                <input nbInput type="text" placeholder='{{ "biz.reward-inventory.register.name" | translate }}' fullWidth formControlName="name" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.description" | translate }}</p>
+                <textarea nbInput fullWidth placeholder='{{ "biz.reward-inventory.register.description" | translate }}'
+                  formControlName='description'></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.type.type" | translate }}</p>
+                <nb-select placeholder='{{ "biz.reward-inventory.register.type.type" | translate }}' formControlName="type" fullWidth
+                  [selected]="registerForm.controls['type'].value ">
+                  <nb-option value="01">{{ "biz.reward-inventory.register.type.others" | translate }}</nb-option>
+                  <nb-option value="02">{{ "biz.reward-inventory.register.type.point" | translate }}</nb-option>
+                  <nb-option value="03">{{ "biz.reward-inventory.register.type.voucher/coupon" | translate }}</nb-option>
+                  <nb-option value="04">{{ "biz.reward-inventory.register.type.course" | translate }}</nb-option>
+                  <nb-option value="05">{{ "biz.reward-inventory.register.type.ticket" | translate }}</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.price" | translate }}</p>
+                <input nbInput type="number" placeholder='{{ "biz.reward-inventory.register.price" | translate }}' fullWidth formControlName="price" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.active.active" | translate }} <nb-checkbox status="basic" style="display: block; margin-right: 34px; margin-top: 15px" formControlName="active_flag"
+                  (checkedChange)="toggleActive(active_flag)"></nb-checkbox></p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.approve.approve" | translate }} <nb-checkbox status="basic" style="display: block; margin-right: 47px; margin-top: 15px" formControlName="is_approve"
+                  (checkedChange)="toggleApprove(is_approve)"></nb-checkbox></p>
+
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.total" | translate }}</p>
+                <input nbInput type="number" placeholder='{{ "biz.reward-inventory.register.total" | translate }}' fullWidth formControlName="total" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.shipping" | translate }}</p>
+                <input nbInput type="number" placeholder='{{ "biz.reward-inventory.register.shipping" | translate }}' fullWidth formControlName="shipping" />
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.sold" | translate }}</p>
+                <input nbInput type="number" placeholder='{{ "biz.reward-inventory.register.sold" | translate }}' fullWidth formControlName="sold" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-11" >
+                <p>{{ "biz.reward-inventory.register.image" | translate }}</p>
+                <input nbInput type="text" placeholder='{{ "biz.reward-inventory.register.image" | translate }}' fullWidth formControlName="image" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+      <nb-card-footer>
+        <div style="float: right; ">
+          <button nbButton (click)="clearForm()" *ngIf="id === '0'" style="margin-right: 10px" status="info">
+            {{ "biz.reward-inventory.register.clear" | translate }}
+          </button>
+          <button style="margin-right: 10px; " class="btn-submit" *ngIf="id != '0' " (click)="updateRewardInventory()"
+            [disabled]="!registerForm.valid" nbButton status="info">
+            {{ "biz.reward-inventory.update.update" | translate }}
+          </button>
+          <button style="margin-right: 10px; " (click)="showToast(physicalPositions.BOTTOM_RIGHT, 'warning', 1000)" class="btn-submit" *ngIf="id === '0'" (click)="RegisterInventory()"
+             nbButton status="info">
+            {{ "biz.reward-inventory.register.save" | translate }}
+          </button>
+          <button nbButton (click)="backInventoryList()"  status="info">
+            {{ "biz.reward-inventory.register.back" | translate }}
+          </button>
+
+
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </nb-layout-column>
+
+</nb-layout>

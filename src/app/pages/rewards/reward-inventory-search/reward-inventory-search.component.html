@@ -1,0 +1,153 @@
+<nb-layout>
+
+  <nb-layout-column>
+    <h1 style="text-align: center; color: #3a86ff; ">{{ "biz.reward-inventory.read.title" | translate }} </h1>
+    <button class="search-button" nbButton size="small" (click)="addIventory()" status="primary" shape="round"
+      style="float: right;">{{ "biz.reward-inventory.read.new" | translate }}</button>
+    <br>
+    <br>
+    <br>
+    <nb-card class="inventory-search">
+
+      <nb-card-header (click)="toggleCard()" style="cursor: pointer;  ">
+        <h5 >{{ "biz.reward-inventory.read.search" | translate }}
+          <!-- <button nbButton status="default" style="float: right;"> -->
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isCard" icon="arrow-ios-downward-outline"></nb-icon>
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isCard" icon="arrow-ios-upward-outline"></nb-icon>
+          <!-- </button> -->
+          <div class="bottom-radius" *ngIf="!isCard"></div>
+        </h5>
+
+      </nb-card-header>
+      <nb-card-body *ngIf="!isCard" [formGroup]="searchForm">
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-11" >
+              <p>{{ "biz.reward-inventory.read.name" | translate }}</p>
+              <input nbInput type="text"  placeholder= '{{ "biz.reward-inventory.read.name" | translate }}' fullWidth formControlName="name" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-11" >
+              <p>{{ "biz.reward-inventory.read.type.type" | translate }}</p>
+              <nb-select placeholder='{{ "biz.reward-inventory.read.type.type" | translate }}' fullWidth formControlName="type">
+                <nb-option value="">{{ "biz.reward-inventory.read.type.none" | translate }}</nb-option>
+                <nb-option value="01">{{ "biz.reward-inventory.read.type.others" | translate }}</nb-option>
+                <nb-option value="02">{{ "biz.reward-inventory.read.type.point" | translate }}</nb-option>
+                <nb-option value="03">{{ "biz.reward-inventory.read.type.voucher/coupon" | translate }}</nb-option>
+                <nb-option value="04">{{ "biz.reward-inventory.read.type.course" | translate }}</nb-option>
+                <nb-option value="05">{{ "biz.reward-inventory.read.type.ticket" | translate }}</nb-option>
+              </nb-select>
+            </div>
+          </div>
+
+        </div>
+
+        <!--       <p>Description</p>
+      <textarea nbInput fullWidth placeholder="Please input description"></textarea> -->
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-11" >
+              <p>{{ "biz.reward-inventory.read.price" | translate }}</p>
+              <input nbInput type="number" placeholder='{{ "biz.reward-inventory.read.price" | translate }}' fullWidth formControlName="price" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-11">
+              <p>{{ "biz.reward-inventory.read.total" | translate }}</p>
+              <input nbInput type="number" placeholder='{{ "biz.reward-inventory.read.total" | translate }}' fullWidth formControlName="total" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-11" >
+              <p>{{ "biz.reward-inventory.read.shipping" | translate }}</p>
+              <input nbInput type="number" placeholder='{{ "biz.reward-inventory.read.shipping" | translate }}' fullWidth formControlName="shipping" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-11">
+              <p>{{ "biz.reward-inventory.read.sold" | translate }}</p>
+              <input nbInput type="number" placeholder='{{ "biz.reward-inventory.read.sold" | translate }}' fullWidth formControlName="sold" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-11" >
+              <p>{{ "biz.reward-inventory.read.approve.approve" | translate }}</p>
+              <nb-select placeholder='{{ "biz.reward-inventory.read.approve.none" | translate }}' fullWidth formControlName="is_approve">
+                <nb-option [value]="">{{ "biz.reward-inventory.read.approve.none" | translate }}</nb-option>
+                <nb-option [value]="true">{{ "biz.reward-inventory.read.approve.approved" | translate }}</nb-option>
+                <nb-option [value]="false">{{ "biz.reward-inventory.read.approve.not-approved" | translate }}</nb-option>
+              </nb-select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-11">
+              <p>{{ "biz.reward-inventory.read.active.active" | translate }}</p>
+              <nb-select placeholder='{{ "biz.reward-inventory.read.active.none" | translate }}' fullWidth formControlName="active_flag">
+                <nb-option [value]="">{{ "biz.reward-inventory.read.active.none" | translate }}</nb-option>
+                <nb-option [value]="true">{{ "biz.reward-inventory.read.active.actived" | translate }}</nb-option>
+                <nb-option [value]="false">{{ "biz.reward-inventory.read.active.not-actived" | translate }}</nb-option>
+              </nb-select>
+            </div>
+          </div>
+
+        </div>
+
+        <!--  <p>Images</p>
+      <input nbInput type="text" placeholder="Please input url image" fullWidth /> -->
+
+        <!-- <br>
+        <br> -->
+
+        <div style="float: right;" class="footer-btn">
+          <button class="search-button" size="small" nbButton shape="round" status="primary"
+            (click)="resetSearchForm()">
+            {{ "biz.reward-inventory.read.reset" | translate }}
+          </button>
+          <button style="margin-left: 10px" class="search-button" size="small" nbButton shape="round" status="primary"
+            (click)="searchRewardInventory()">
+            {{ "biz.reward-inventory.read.search" | translate }}
+          </button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="inventory-result">
+      <nb-card-header (click)="toogleBelowCard()" style="cursor: pointer;  ">
+
+        <h5>{{ "biz.reward-inventory.read.reward-inventory-list.result" | translate }}
+
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="!isBelowCard" icon="arrow-ios-downward-outline">
+          </nb-icon>
+          <nb-icon style="float: right; font-size: 1.2em;" *ngIf="isBelowCard" icon="arrow-ios-upward-outline">
+          </nb-icon>
+
+        </h5>
+        <div class="bottom-radius" *ngIf="isBelowCard"></div>
+      </nb-card-header>
+      <nb-card-body *ngIf="isBelowCard">
+        <ng2-smart-table [settings]="settings" [source]="reward_inventory" (custom)="onCustomEvent($event)">
+
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

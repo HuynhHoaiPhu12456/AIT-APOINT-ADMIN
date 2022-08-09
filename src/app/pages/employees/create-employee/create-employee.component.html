@@ -1,0 +1,155 @@
+<h1 class="text-primary">{{ "common.employee.create.title" | translate }}</h1>
+<div class="back-button">
+    <button nbButton status="primary" (click)="onClickBack()">
+        Go Back
+    </button>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<nb-card>
+            <nb-card-body>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputName" class="label">{{ "common.employee.create.user_id" | translate }}</label>
+                            <input
+                                type="text"
+                                nbInput
+                                fullWidth
+                                required
+                                id="inputName"
+                                placeholder='{{ "common.employee.create.name" | translate }}'
+                                [(ngModel)]="employee.user_id"
+                                (ngModelChange)="onNameChange($event)"
+                                [nbAutocomplete]="autoName"
+                            >
+                            <nb-autocomplete #autoName aria-required="true">
+                                <nb-option
+                                    *ngFor="let user of filterdUsers$ | async"
+                                    [value]="user.value"
+                                >
+                                    {{ user.name }}
+                                </nb-option>
+                            </nb-autocomplete>
+                          </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputDateOfBirth" class="label">{{ "common.employee.create.date_of_birth" | translate }}</label>
+                            <div style="display: flex;">
+                                <nb-form-field>
+                                    <input 
+                                        #dateOfBirth
+                                        nbInput
+                                        fullWidth
+                                        required
+                                        placeholder="yyyy/MM/dd"
+                                        [nbDatepicker]="DOB"
+                                        [(ngModel)]="employee.date_of_birth"
+                                        (ngModelChange)="onChangeValue()"
+                                    >
+                                    <button nbSuffix nbButton ghost (click)="dateOfBirth.click()">
+                                        <nb-icon
+                                            nbSuffix
+                                            icon="calendar-outline"
+                                            pack="eva"
+                                            style="cursor: pointer"
+                                        ></nb-icon>
+                                    </button>									
+                                    <nb-datepicker #DOB [max]="max"></nb-datepicker>
+                                </nb-form-field>									
+                            </div>							
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputAddress" class="label">{{ "common.employee.create.address" | translate }}</label>
+                            <input 
+                                type="text" 
+                                nbInput 
+                                fullWidth
+                                required 
+                                id="inputAddress" 
+                                placeholder='{{ "common.employee.create.address" | translate }}'
+                                [(ngModel)]="employee.address"
+                                (ngModelChange)="onChangeValue()"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputPhone" class="label">{{ "common.employee.create.gender.gender" | translate }}</label>
+                            <nb-radio-group 
+                                class="row radio-row" 
+                                [(value)]="employee.gender"
+                                aria-required="true"
+                                (click)="onChangeValue()"
+                            >
+                                <nb-radio [value]='"1"'>
+                                    {{ "common.employee.create.gender.male" | translate }}
+                                </nb-radio>
+                                <nb-radio [value]='"2"'>
+                                    {{ "common.employee.create.gender.female" | translate }}
+                                </nb-radio>
+                                <nb-radio [value]='"0"'>
+                                    {{ "common.employee.create.gender.other" | translate }}
+                                </nb-radio>
+                            </nb-radio-group>
+                        </div>
+                    </div>                       
+                </div>
+                  
+                <div class="row">      
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputPhone" class="label">{{ "common.employee.create.phone" | translate }}</label>
+                            <input 
+                                type="text" 
+                                nbInput 
+                                fullWidth 
+                                id="inputPhone" 
+                                placeholder='{{ "common.employee.create.phone" | translate }}'
+                                [(ngModel)]="employee.phone"
+                                (ngModelChange)="onChangeValue()"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputDeptId" class="label">{{ "common.employee.create.department" | translate }}</label>
+                            <br/>
+                            <nb-select 
+                                multiple
+                                fullWidth
+                                placeholder='{{ "common.employee.create.department" | translate }}'
+                                [(ngModel)]="employee.dept_id"
+                                (ngModelChange)="onChangeValue()"
+                            > 
+                                <nb-option
+                                    *ngFor="let department of departments"
+                                    [value]="department.value"
+                                >
+                                    {{ department.name }}
+                                </nb-option>
+                            </nb-select>
+                        </div>
+                    </div>
+                </div>
+            </nb-card-body>
+
+            <nb-card-footer>
+                <button [disabled]="!is_show_clear" type="reset" nbButton status="primary" (click)="onClickClear()">
+                    {{ "common.employee.create.clear" | translate }}
+                </button>
+                <button [disabled]="!is_show_save" type="submit" nbButton status="primary" (click)="onClickSave()">
+                    {{ "common.employee.create.save" | translate }}
+                </button>
+            </nb-card-footer>
+		</nb-card>
+	</div>
+</div>
+<nb-alert *ngIf="is_success" status="success" closable (close)="onClose()">{{ "message.register.success" | translate }}</nb-alert>
+<nb-alert *ngIf="is_fail" status="danger" closable (close)="onClose()">{{ "message.register.failure" | translate }}</nb-alert>

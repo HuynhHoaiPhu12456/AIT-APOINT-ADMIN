@@ -1,0 +1,51 @@
+<div class="wrapper">
+  <header class="header">
+    <span>USER PROFILE</span>
+  </header>
+  <div class="body">
+    <aside class="aside aside-1">
+      <nb-form-field>
+        <p class="text">Name</p>
+        <input type="text" nbInput placeholder="Input name" />
+      </nb-form-field>
+      <div class="space"></div>
+      <nb-form-field>
+        <p class="text">DOB</p>
+        <input
+          nbInput
+          placeholder="Pick Date"
+          [nbDatepicker]="dateTimePicker"
+        />
+        <nb-datepicker #dateTimePicker></nb-datepicker>
+      </nb-form-field>
+    </aside>
+    <aside class="aside aside-2">
+      <nb-form-field>
+        <p class="text">Address</p>
+        <input type="text" nbInput placeholder="Input address" />
+      </nb-form-field>
+      <div class="space"></div>
+      <div class="gender">
+        <p class="text">Gender</p>
+        <nb-radio-group style="display: flex">
+          <nb-radio
+            *ngFor="let option of options"
+            [value]="option.value"
+            [checked]="option.checked"
+          >
+            {{ option.label }}
+          </nb-radio>
+        </nb-radio-group>
+      </div>
+    </aside>
+  </div>
+  <footer class="footer">
+    <div style="flex: 1"></div>
+    <div class="btn-groupz">
+      <button class="btn" nbButton status="primary">Delete</button>
+      <button class="btn" nbButton status="primary">Reset</button>
+      <button class="btn" nbButton status="primary">Copy</button>
+      <button class="btn" nbButton status="primary">Save</button>
+    </div>
+  </footer>
+</div>

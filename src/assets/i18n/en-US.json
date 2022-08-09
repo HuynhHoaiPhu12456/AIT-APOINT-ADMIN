@@ -1,0 +1,386 @@
+{
+  "home": {
+    "name": "Iron Man US",
+    "footer": "Ait starter angular US"
+  },
+  "common": {
+    "header": {
+      "profile": "Profile",
+      "log out": "Log out"
+    },
+    "auth": {
+      "login": {
+        "title": "Login",
+        "subtitle": "Hello! Log in with your email.",
+        "email": "Email",
+        "password": "Password",
+        "forgot_pwd": "Forgot Password",
+        "remember": "Remember me",
+        "login": "Log In",
+        "no_account": "Don't have an account?",
+        "register": "Register"
+      },
+      "register": {
+        "title": "Register",
+        "fullname": "Full name",
+        "email": "Email",
+        "password": "Password",
+        "repeat_pwd": "Repeat password",
+        "confirm_pwd": "Confirm Password",
+        "agree": "Agree to",
+        "condition": "Terms & Conditions",
+        "register": "Register",
+        "enter": "or enter with",
+        "have_account": "Already have an account?",
+        "login": "Log in"
+      }
+    },
+    "search": {
+      "search": "Search",
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "E-mail",
+      "create_by": "Create by",
+      "create_at": "Create at",
+      "change_by": "Change by",
+      "change_at": "Change at",
+      "date_of_birth": "Date of birth",
+      "gender": {
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "department": "Department",
+      "total_point": "Total point",
+      "clear": "Clear",
+      "submit": "Search"
+    },
+    "department": {
+      "read": {
+        "title": "Department",
+        "department_list": "Department list",
+        "new": "New",
+        "action": "Actions",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "create_at": "Create at",
+        "create_by": "Create by",
+        "change_at": "Change at",
+        "change_by": "Change by",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "create": {
+        "title": "Department Register",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "clear": "Clear",
+        "save": "Save"
+      },
+      "update": {
+        "title": "Update Department",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "unchange": "Reset",
+        "clear": "Clear",
+        "save": "Save"
+      }
+    },
+    "employee": {
+      "read": {
+        "title": "Employee",
+        "new": "New",
+        "employee_list": "Employee list",
+        "action": "Actions",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "create_by": "Create by",
+        "create_at": "Create at",
+        "change_by": "Change by",
+        "change_at": "Change at",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "total_point": "Total point",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "create": {
+        "title": "Create Employee",
+        "user_id": "User ID",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "clear": "Clear",
+        "save": "Save"
+      },
+      "update": {
+        "title": "Update Employee",
+        "user_id": "User ID",
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "E-mail",
+        "date_of_birth": "Date of birth",
+        "gender": {
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "department": "Department",
+        "total_point": "Total point",
+        "unchange": "Reset",
+        "clear": "Clear",
+        "save": "Save"
+      }
+    }
+  },
+  "message": {
+    "register": {
+      "success": "Register successfully!",
+      "failure": "Cannot register!"
+    },
+    "update": {
+      "success": "Update successfully!",
+      "failure": "Cannot update!"
+    },
+    "form_error": {
+      "email": "Email should be the real one!",
+      "require": " is required!",
+      "length": {
+        "contain": " should contain",
+        "from": "from",
+        "to": "to",
+        "characters": "characters"
+      },
+      "confirm": {
+        "require": "Password confirmation is required!",
+        "not_match": "Password does not match the confirm password."
+      }
+    }
+  },
+  "sidebar": {
+    "department": "Department",
+    "employee": "Employee",
+    "reward-inventory": "Reward inventory",
+    "reward-order": "Reward order",
+    "event-category": "Event Category",
+    "master": "MASTER",
+    "business": "BUSINESS",
+    "auth": "Auth",
+    "login": "Login",
+    "register": "Register",
+    "request password": "Request Password",
+    "reset password": "Reset Password"
+  },
+  "biz": {
+    "reward-inventory": {
+      "read": {
+        "title": "Reward inventory list",
+        "new": "New",
+        "search": "Search",
+        "name": "Name",
+        "type": {
+          "type": "Type",
+          "none": "None",
+          "others": "Others",
+          "point": "Point",
+          "voucher/coupon": "Voucher/Coupon",
+          "course": "Course",
+          "ticket": "Ticket"
+        },
+        "price": "Price",
+        "total": "Total",
+        "shipping": "Shipping",
+        "sold": "Sold",
+        "approve": {
+          "approve": "Approve",
+          "none": "None",
+          "approved": "Approved",
+          "not-approved": "Not approved"
+        },
+        "active": {
+          "active": "Active",
+          "none": "None",
+          "actived": "Actived",
+          "not-actived": "Not actived"
+        },
+        "reset": "Clear",
+        "reward-inventory-list": {
+          "result": "Result",
+          "action": "Actions",
+          "name": "Name",
+          "type": {
+            "type": "Type",
+            "none": "None",
+            "others": "Others",
+            "point": "Point",
+            "voucher/coupon": "Voucher/Coupon",
+            "course": "Course",
+            "ticket": "Ticket"
+          },
+          "price": "Price",
+          "total": "Total",
+          "shipping": "Shipping",
+          "sold": "Sold",
+          "approve": {
+            "approve": "Approve",
+            "none": "None",
+            "approved": "Approved",
+            "not-approved": "Not approved"
+          },
+          "active": {
+            "active": "Active",
+            "none": "None",
+            "actived": "Actived",
+            "not-actived": "Not actived"
+          }
+        }
+      },
+      "register": {
+        "title": "Register inventory",
+        "name": "Name",
+        "description": "Description",
+        "image": "Image",
+        "type": {
+          "type": "Type",
+          "none": "None",
+          "others": "Others",
+          "point": "Point",
+          "voucher/coupon": "Voucher/Coupon",
+          "course": "Course",
+          "ticket": "Ticket"
+        },
+        "price": "Price",
+        "total": "Total",
+        "shipping": "Shipping",
+        "sold": "Sold",
+        "approve": {
+          "approve": "Approve",
+          "none": "None",
+          "approved": "Approved",
+          "not-approved": "Not approved"
+        },
+        "active": {
+          "active": "Active",
+          "none": "None",
+          "actived": "Actived",
+          "not-actived": "Not actived"
+        },
+        "clear": "Clear",
+        "save": "Save",
+        "back": "Back"
+      },
+      "update": {
+        "title": "Update inventory",
+        "update": "Update"
+      },
+      "confirm": {
+        "require": "Are you sure you want to delete this reward ?",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "success": "Deleted successfully"
+      }
+    },
+    "reward-order": {
+      "read": {
+        "title": "Reward order list",
+        "new": "New",
+        "search": "Search",
+        "user": "User",
+        "reward": "Reward",
+        "status": {
+          "status": "Status",
+          "none": "None",
+          "new": "New",
+          "approved": "Approved",
+          "claimed": "Claimed"
+        },
+        "date": "Time request",
+        "reset": "Clear",
+        "reward-order-list": {
+          "result": "Result",
+          "action": "Actions",
+          "user": "User",
+          "reward": "Reward",
+          "status": {
+            "status": "Status",
+            "none": "None",
+            "new": "New",
+            "approved": "Approved",
+            "claimed": "Claimed"
+          },
+          "remark": "Remark",
+          "date": "Time request"
+        }
+      }
+    },
+    "eventcategory": {
+      "read": {
+        "title": "Event category",
+        "new": "New",
+        "name": "Name",
+        "active": {
+          "active": "Active",
+          "actived": "Actived",
+          "noactived": "No Actived"
+        },
+        "clear": "Clear",
+        "search": "Search",
+        "eventlist": {
+          "title": "Event Category List",
+          "actions": "Actions"
+        }
+      },
+      "register": {
+        "title": "Register Event Category",
+        "name": "Name",
+        "description": "Description",
+        "active": {
+          "active": "Active",
+          "actived": "Actived",
+          "noactived": "No Actived"
+        },
+        "clear": "Clear",
+        "save": "Save",
+        "back": "Back"
+      },
+      "update": {
+        "title": "Update Event Category",
+        "update": "Update"
+      },
+      "confirm": {
+        "require": "Are you sure you want to delete this event ?",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "success": "Deleted successfully",
+        "validate": "Please input event name"
+      }
+    }
+  }
+}

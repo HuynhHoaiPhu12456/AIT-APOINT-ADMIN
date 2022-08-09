@@ -1,0 +1,397 @@
+{
+  "home": {
+    "name": "Iron Man VN",
+    "footer": "Ait starter angular VN"
+  },
+  "common": {
+    "header": {
+      "profile": "Hồ sơ",
+      "log out": "Đăng xuất"
+    },
+    "auth": {
+      "login": {
+        "title": "Đăng nhập",
+        "subtitle": "Xin chào! Đăng nhập bằng email của bạn.",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "forgot_pwd": "Quên mật khẩu",
+        "remember": "Nhớ đăng nhập",
+        "login": "Đăng nhập",
+        "no_account": "Chưa có tài khoản?",
+        "register": "Đăng kí ngay"
+      },
+      "register": {
+        "title": "Đăng kí",
+        "fullname": "Họ và tên",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "repeat_pwd": "Xác nhận mật khẩu",
+        "confirm_pwd": "Xác nhận mật khẩu",
+        "agree": "Đồng ý với",
+        "condition": "Các điều khoản và điều kiện",
+        "register": "Đăng kí",
+        "enter": "hoặc đăng nhập với",
+        "have_account": "Đã có tài khoản?",
+        "login": "Đăng nhập ngay"
+      }
+    },
+    "search": {
+      "search": "Tìm kiếm",
+      "name": "Tên",
+      "address": "Địa chỉ",
+      "phone": "Điện thoại",
+      "email": "E-mail",
+      "create_by": "Tạo bởi",
+      "create_at": "Tạo lúc",
+      "change_by": "Thay đổi bởi",
+      "change_at": "Thay đổi lúc",
+      "date_of_birth": "Ngày sinh",
+      "gender": {
+        "gender": "Giới tính",
+        "male": "Nam",
+        "female": "Nữ",
+        "other": "Khác"
+      },
+      "department": "Phòng ban",
+      "total_point": "Tổng điểm",
+      "clear": "Xóa",
+      "submit": "Tìm kiếm"
+    },
+    "department": {
+      "read": {
+        "title": "Quản lí phòng ban",
+        "department_list": "Danh sách phòng ban",
+        "new": "Thêm",
+        "action": "Thao tác",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "create_at": "Tạo lúc",
+        "create_by": "Tạo bởi",
+        "change_at": "Thay đổi lúc",
+        "change_by": "Thay đổi bởi",
+        "edit": "Sửa",
+        "delete": "Xóa"
+      },
+      "create": {
+        "title": "Đăng kí phòng ban",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "clear": "Xóa",
+        "save": "Lưu"
+      },
+      "update": {
+        "title": "Cập nhật thông tin phòng ban",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "unchange": "Bỏ thay đổi",
+        "clear": "Xóa",
+        "save": "Lưu"
+      }
+    },
+    "employee": {
+      "read": {
+        "title": "Quản lí nhân viên",
+        "new": "Thêm",
+        "employee_list": "Danh sách nhân viên",
+        "action": "Thao tác",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "create_by": "Tạo bởi",
+        "create_at": "Tạo lúc",
+        "change_by": "Thay đổi bởi",
+        "change_at": "Thay đổi lúc",
+        "date_of_birth": "Ngày sinh",
+        "gender": {
+          "gender": "Giới tính",
+          "male": "Nam",
+          "female": "Nữ",
+          "other": "Khác"
+        },
+        "department": "Phòng ban",
+        "total_point": "Tổng điểm",
+        "edit": "Sửa",
+        "delete": "Xóa"
+      },
+      "create": {
+        "title": "Đăng kí nhân viên",
+        "user_id": "User ID",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "date_of_birth": "Ngày sinh",
+        "gender": {
+          "gender": "Giới tính",
+          "male": "Nam",
+          "female": "Nữ",
+          "other": "Khác"
+        },
+        "department": "P",
+        "clear": "Xóa",
+        "save": "Lưu"
+      },
+      "update": {
+        "title": "Cập nhật thông tin nhân viên",
+        "user_id": "User ID",
+        "name": "Tên",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "E-mail",
+        "date_of_birth": "Ngày sinh",
+        "gender": {
+          "gender": "Giới tính",
+          "male": "Nam",
+          "female": "Nữ",
+          "other": "Khác"
+        },
+        "department": "Phòng ban",
+        "total_point": "Tổng điểm",
+        "unchange": "Bỏ thay đổi",
+        "clear": "Xóa",
+        "save": "Lưu"
+      }
+    }
+  },
+  "message": {
+    "register": {
+      "success": "Đăng kí thành công!",
+      "failure": "Không thể đăng kí!"
+    },
+    "update": {
+      "success": "Cập nhật thành công!",
+      "failure": "Không thể cập nhật!"
+    },
+    "form_error": {
+      "email": "E-mail không hợp lệ!",
+      "require": " được bắt buộc!",
+      "length": {
+        "contain": " cần chứa",
+        "from": "từ",
+        "to": "đến",
+        "characters": "kí tự"
+      },
+      "confirm": {
+        "require": "Bắt buộc xác nhận mật khẩu!",
+        "not_match": "Mật khẩu không trùng khớp."
+      }
+    }
+  },
+  "sidebar": {
+    "department": "Phòng ban",
+    "employee": "Nhân viên",
+    "reward-inventory": "Quản lý kho quà",
+    "reward-order": "Danh mục quà tặng",
+    "event-category": "Danh mục sự kiện",
+    "master": "MASTER",
+    "business": "BUSINESS",
+    "auth": "Xác thực",
+    "login": "Đăng nhập",
+    "register": "Đăng kí",
+    "request password": "Quên mật khẩu",
+    "reset password": "Đổi mật khẩu"
+
+  },
+  "biz": {
+    "reward-inventory": {
+      "read": {
+        "title": "Quản lý kho quà",
+        "new": "Thêm ",
+        "search": "Tìm kiếm",
+        "name": "Tên",
+        "type": {
+          "type": "Loại quà",
+          "none": "Không",
+          "others": "Khác",
+          "point": "Điểm",
+          "voucher/coupon": "Phiếu giảm giá/Phiếu mua hàng",
+          "course": "Khóa học",
+          "ticket": "Vé"
+        },
+        "price": "Giá",
+        "total": "Tổng ",
+        "shipping": "Vận chuyển",
+        "sold": "Số lượng bán",
+        "approve": {
+          "approve": "Chấp thuận",
+          "none": "Không",
+          "approved": "Đã chấp thuận",
+          "not-approved": "Không chấp thuận"
+        },
+        "active": {
+          "active": "Kích hoạt",
+          "none": "Không",
+          "actived": "Đã kích hoạt",
+          "not-actived": "Không kích hoạt"
+        },
+        "reset": "Nhập lại",
+        "reward-inventory-list": {
+          "result": "Kết quả",
+          "action": "Thao tác",
+          "name": "Tên",
+          "type": {
+            "type": "Loại quà",
+            "none": "Không",
+            "others": "Khác",
+            "point": "Điểm",
+            "voucher/coupon": "Phiếu giảm giá/Phiếu mua hàng",
+            "course": "Khóa học",
+            "ticket": "Vé"
+          },
+          "price": "Giá",
+          "total": "Tổng ",
+          "shipping": "Vận chuyển",
+          "sold": "Số lượng bán",
+          "approve": {
+            "approve": "Chấp thuận",
+            "none": "Không",
+            "approved": "Đã chấp thuận",
+            "not-approved": "Không chấp thuận"
+          },
+          "active": {
+            "active": "Kích hoạt",
+            "none": "Không",
+            "actived": "Đã kích hoạt",
+            "not-actived": "Không kích hoạt"
+          }
+
+        }
+      },
+      "register": {
+        "title": "Đăng kí kho quà",
+        "name": "Tên",
+        "description": "Mô tả",
+        "image": "Hình ảnh",
+        "type": {
+          "type": "Loại quà",
+          "none": "Không",
+          "others": "Khác",
+          "point": "Điểm",
+          "voucher/coupon": "Phiếu giảm giá/Phiếu mua hàng",
+          "course": "Khóa học",
+          "ticket": "Vé"
+        },
+        "price": "Giá",
+        "total": "Tổng ",
+        "shipping": "Vận chuyển",
+        "sold": "Số lượng bán",
+        "approve": {
+          "approve": "Chấp thuận",
+          "none": "Không",
+          "approved": "Đã chấp thuận",
+          "not-approved": "Không chấp thuận"
+        },
+        "active": {
+          "active": "Kích hoạt",
+          "none": "Không",
+          "actived": "Đã kích hoạt",
+          "not-actived": "Không kích hoạt"
+        },
+        "clear": "Nhập lại",
+        "save": "Lưu",
+        "back": "Quay lại"
+      },
+      "update": {
+        "title": "Cập nhật kho quà",
+        "update": "Cập nhật"
+      },
+      "confirm": {
+        "require": "Bạn có chắc chắn muốn xóa phần thưởng này không?",
+        "cancel": "Không",
+        "yes": "Có",
+        "success": "Xóa thành công"
+      },
+      "validate": {
+          "name": "Xin hãy nhập tên",
+          "type": "Xin hãy chọn loại quà",
+          "price": "Xin hãy nhập giá",
+          "total": "Xin hãy nhập tổng số",
+          "shipping": "Xin hãy nhập số đã vận chuyển",
+          "sold": "Xin hãy nhập số lượng bán"
+      }
+    },
+    "reward-order": {
+      "read": {
+        "title": "Danh mục quà tặng",
+        "new": "Thêm",
+        "search": "Tìm kiếm ",
+        "user": "Tên người dùng",
+        "reward": "Quà tặng",
+        "status": {
+          "status": "Trạng thái",
+          "none": "Không",
+          "new": "Mới",
+          "approved": "Đã chấp thuận",
+          "claimed": "Đã nhận"
+        },
+        "date": "Thời gian yêu cầu",
+        "reset": "Nhập lại",
+        "reward-order-list": {
+          "result": "Kết quả",
+          "action": "Thao tác",
+          "user": "Tên người dùng",
+          "reward": "Quà tặng",
+          "status": {
+            "status": "Trạng thái",
+            "none": "Không",
+            "new": "Mới",
+            "approved": "Đã chấp thuận",
+            "claimed": "Đã nhận"
+          },
+          "remark": "Nhận xét",
+          "date": "Thời gian yêu cầu"
+        }
+      }
+
+    },
+    "eventcategory": {
+      "read": {
+        "title": "Quản lý sự kiện",
+        "new": "Thêm mới",
+        "name": "Tên sự kiện",
+        "active": {
+          "active": "Kích hoạt",
+          "actived": "Đã kích hoạt",
+          "noactived": "Chưa kích hoạt"
+        },
+        "clear": "Nhập lại",
+        "search": "Tìm kiếm",
+        "eventlist": {
+          "title": "Danh sách sự kiện",
+          "actions": "Hành động"
+        }
+      },
+      "register": {
+        "title": "Đăng ký sự kiện",
+        "name": "Tên sự kiện",
+        "description": "Mô tả",
+        "active": {
+          "active": "Kích hoạt",
+          "actived": "Đã kích hoạt",
+          "noactived": "Chưa kích hoạt"
+        },
+        "clear": "Nhập lại",
+        "save": "Lưu",
+        "back": "Quay lại"
+      },
+      "update": {
+        "title": "Cập nhật sự kiện",
+        "update": "Cập nhật"
+      },
+      "confirm": {
+        "require": "Bạn có chắc chắn muốn xóa sự kiện này không?",
+        "cancel": "Không",
+        "yes": "Có",
+        "success": "Xóa thành công",
+        "validate": "Vui lòng nhập tên sự kiện"
+      }
+    }
+  }
+}

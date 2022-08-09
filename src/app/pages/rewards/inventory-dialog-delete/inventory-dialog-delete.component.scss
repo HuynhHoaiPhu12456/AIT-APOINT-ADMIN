@@ -1,0 +1,28 @@
+nb-card-body {
+  font-weight: 600;
+  padding: 50px 40px 30px 40px;
+
+  .btn-action {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+
+.btn-cancel {
+  width: 100px;
+  cursor: pointer;
+  background: #3a86ff;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.btn-yes {
+  width: 100px;
+  cursor: pointer;
+  background: #3a86ff;
+  color: #fff;
+  border-radius: 15px;
+
+}
+  }
+
+}

@@ -1,0 +1,83 @@
+<h1 class="text-primary">{{ "common.department.create.title" | translate }}</h1>
+<div class="back-button">
+    <button nbButton status="primary" (click)="onClickBack()">
+        Go Back
+    </button>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<nb-card>
+            <nb-card-body>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputName" class="label">{{ "common.department.create.name" | translate }}</label>
+                            <input
+                                type="text"
+                                nbInput
+                                fullWidth
+                                id="inputName"
+                                [(ngModel)]="department.name"
+                                placeholder='{{ "common.department.create.name" | translate }}'
+                                required=true
+                            >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputAddress" class="label">{{ "common.department.create.address" | translate }}</label>
+                            <input
+                                type="text"
+                                nbInput
+                                fullWidth
+                                id="inputAddress"
+                                [(ngModel)]="department.address"
+                                placeholder='{{ "common.department.create.address" | translate }}'
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputPhone" class="label">{{ "common.department.create.phone" | translate }}</label>
+                            <input
+                                type="text"
+                                nbInput
+                                fullWidth
+                                id="inputPhone"
+                                [(ngModel)]="department.phone"
+                                placeholder='{{ "common.department.create.phone" | translate }}'
+                            >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="label">{{ "common.department.create.email" | translate }}</label>
+                            <input
+                                type="email"
+                                nbInput
+                                fullWidth
+                                id="inputEmail"
+                                [(ngModel)]="department.email"
+                                placeholder='{{ "common.department.create.email" | translate }}'
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nb-card-body>
+
+            <nb-card-footer>
+                <button type="reset" nbButton status="primary" (click)="onClickClear()">
+                    {{ "common.department.create.clear" | translate }}
+                </button>
+                <button type="submit" nbButton status="primary" (click)="onClickSave()">
+                    {{ "common.department.create.save" | translate }}
+                </button>
+            </nb-card-footer>
+		</nb-card>
+	</div>
+</div>
+<nb-alert *ngIf="is_success" status="success" closable (close)="onClose()">{{ "message.register.success" | translate }}</nb-alert>
+<nb-alert *ngIf="is_fail" status="danger" closable (close)="onClose()">{{ "message.register.failure" | translate }}</nb-alert>
