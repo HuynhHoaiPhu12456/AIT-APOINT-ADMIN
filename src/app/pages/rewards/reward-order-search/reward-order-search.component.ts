@@ -84,7 +84,11 @@ export class RewardOrderSearchComponent implements OnInit {
           else {return null}
         },
         filterFunction: (cell: {name: string}, search:string): boolean => {
-          return cell.name.includes(search)
+          if(cell) {
+            return cell.name.includes(search);
+          } else {
+            return false
+          }
 
         }
       },
